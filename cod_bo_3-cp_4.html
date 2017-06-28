@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+	</head>
+	<body>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+		
+		<script>
+			
+				var prices = new Array();
+				var pricesl = new Array();
+				var sellers = new Array();
+				var ratting = new Array();
+				var S4title = new Array();
+				var S4seller = new Array();
+				var S4image = new Array();
+				var S4price = new Array();
+				var S4pricel = new Array();
+				var S4discount = new Array();
+				var S4crossLine = new Array();
+				var S4protectPrice = new Array();
+				var S4description = new Array();
+				var changer = new String();
+				var KBP = 1;
+				prices[0] = 20.99;
+				prices[1] = 21.99;
+				prices[2] = 22534543535435.99;
+				prices[3] = 23.99;
+				prices[4] = 24.99;
+				prices[5] = 25.99;
+				prices[6] = 26.99;
+				sellers[0] = "first seller";
+				sellers[1] = "second seller";
+				sellers[2] = "third seller";
+				sellers[3] = "fourth seller";
+				sellers[4] = "fifth seller";
+				sellers[5] = "sixth seller";
+				sellers[6] = "seventh seller";
+				ratting[0] = "100% (25)";
+				ratting[1] = "100% (25)";
+				ratting[2] = "100% (25)";
+				ratting[3] = "100% (25)";
+				ratting[4] = "100% (25)";
+				ratting[5] = "100% (25)";
+				ratting[6] = "100% (25)";			
+				S4title[0] = "Batman Arkham Knight";
+				S4title[1] = "Batman Arkham Knight";
+				S4title[2] = "Batman Arkham Knight";
+				S4title[3] = "Batman Arkham Knight";
+				S4seller[0] = "eighth seller";
+				S4seller[1] = "ninth seller";
+				S4seller[2] = "tenth seller";
+				S4seller[3] = "eleventh seller";
+				S4image[0] = "images/item-1.jpg";
+				S4image[1] = "images/item-1.jpg";
+				S4image[2] = "images/item-1.jpg";
+				S4image[3] = "images/item-1.jpg";
+				S4price[0] = 18.99;
+				S4price[1] = 19.99;
+				S4price[2] = 20.99;
+				S4price[3] = 21.99;
+				S4discount[0] = "-21%";
+				S4discount[1] = "-21%";
+				S4discount[2] = "-21%";
+				S4discount[3] = "-21%";
+				S4crossLine[0] = "€59,99";
+				S4crossLine[1] = "€59,99";
+				S4crossLine[2] = "€59,99";
+				S4crossLine[3] = "€59,99";
+				S4protectPrice[0] = "+€1.00";
+				S4protectPrice[1] = "+€1.00";
+				S4protectPrice[2] = "+€1.00";
+				S4protectPrice[3] = "+€1.00";
+				S4description[0] = "GTA 5 for PC will take full advantage of the power of PC to deliever across-the-board enhancements.";
+				S4description[1] = "GTA 5 for PC will take full advantage of the power of PC to deliever across-the-board enhancements.";
+				S4description[2] = "GTA 5 for PC will take full advantage of the power of PC to deliever across-the-board enhancements.";
+				S4description[3] = "GTA 5 for PC will take full advantage of the power of PC to deliever across-the-board enhancements.";
+				pricesl[0] = prices[0] - KBP;
+				pricesl[1] = prices[1] - KBP;
+				pricesl[2] = prices[2] - KBP;
+				pricesl[3] = prices[3] - KBP;
+				pricesl[4] = prices[4] - KBP;
+				pricesl[5] = prices[5] - KBP;
+				pricesl[6] = prices[6] - KBP;
+				S4pricel[0] = S4price[0] - KBP;
+				S4pricel[1] = S4price[1] - KBP;
+				S4pricel[2] = S4price[2] - KBP;
+				S4pricel[3] = S4price[3] - KBP;
+		</script>
+		<div class="buying">
+			
+			<span class="text10">YOU BOUGHT</span>
+			<span class="text11">Call Of Duty: Black Ops 3</span>
+			<script>
+				
+				var selectedSeller;
+				for (var n = 0; n < sellers.length; n++)
+				{
+					document.write('<div class="text12"> for €');
+					document.write('<span class="text12KBP">');
+					changer = prices[n].toString();
+					changer = changer.replace(".",",");
+					document.write(changer);
+					document.write('</span>');
+					document.write('<span class="text12l">');
+					changer = pricesl[n].toString();
+					changer = changer.replace(".",",");
+					document.write(changer);
+					document.write('</span>');
+					document.write(' from ');
+					document.write(sellers[n]);
+					document.write('</div>');
+				}
+				for (var n = 0; n < S4price.length; n++)
+				{
+					document.write('<div class="text15"> for €');
+					document.write('<span class="text15KBP">');
+					changer = S4price[n].toString();
+					changer = changer.replace(".",",");
+					document.write(changer);
+					document.write('</span>');
+					document.write('<span class="text15l">');
+					changer = S4pricel[n].toString();
+					changer = changer.replace(".",",");
+					document.write(changer);
+					document.write('</span>');
+					document.write(' from ');
+					document.write(S4seller[n]);
+					document.write('</div>');
+				}
+				var b = document.getElementsByClassName('text12');
+				var c = document.getElementsByClassName('text15');
+				var d = document.getElementsByClassName('text12KBP');
+				var e = document.getElementsByClassName('text12l');
+				var f = document.getElementsByClassName('text15KBP');
+				var g = document.getElementsByClassName('text15l');
+				for (var n = 0; n < sellers.length; n++)
+				{
+					b[n].style.display = "none";
+					e[n].style.display = "none";
+				}
+				for (var n = 0; n < S4price.length; n++)
+				{
+					c[n].style.display = "none";
+					g[n].style.display = "none";
+				}
+				selectedSeller = 0;
+				b[selectedSeller].style.display = "block";
+				
+			</script>
+			<span class="text13">THANK YOU FOR PURCHASE</span>
+			<a class="button2" onclick="basketPopUp(true)" onselectstart="return false">
+			<span class="text14">RETURN TO THE PAGE</span>
+			</a>
+			
+		</div>
+		
+		<div class="page">
+		<div class="darkPage"></div>
+			
+			<div class="section-1">
+				<div class="part-1">
+					<div class="video-image"></div>
+					<div class="gr-left"></div>
+					<div class="gr-right"></div>
+					<video autoplay loop muted class="video">
+						<source src="videos/cod3.mp4" type="video/mp4">
+						<source src="videos/cod3.ogv" type="video/ogv">
+						<source src="videos/cod3.webm" type="video/webm">
+					</video>
+					<div class="soldier"></div>
+				</div>
+				<div class="part-2">
+					<div class="part-2-column-1">
+						<div class="social">
+							<a class="section-1-part-2-column-1-facebook" href="#f"></a>
+							<a class="section-1-part-2-column-1-google" href="#g"></a>
+							<a class="section-1-part-2-column-1-twitter" href="#t" onmouseover="opacityOn()" onmouseout="opacityOff()"></a>
+						</div>
+						<span class="section-2-part-3-column-1-text-1">
+							Call Of Duty: Black Ops 3
+						</span>
+						<span class="section-2-part-3-column-1-text-2">
+							Fight the crime and buy Batman Arkham Knight Key for PC.
+							Play as legendary comic hero from DC universe. Compare
+							prices on Kinguin.net and save money!
+						</span>
+					</div>
+					<div class="part-2-column-2">
+						<div class="part-2-column-2-line-1">
+							<span class="part-2-column-2-line-1-element-1">
+								-22%
+							</span>
+							<div class="part-2-column-2-line-1-element-2"></div>
+							<span class="part-2-column-2-line-1-element-3">
+								€59,99
+							</span>
+							
+						</div>
+						<div class="part-2-column-2-line-2">
+							<script>
+								var a;
+								var mainPrice;
+								var h;
+								var l;
+								for (var n = 0; n < sellers.length; n++)
+								{
+									document.write('<div class="part-2-column-2-line-2-element-1">€');
+									document.write('<span class="part-2-column-2-line-2-element-1KBP">');
+									changer = prices[n].toString();
+									changer = changer.replace(".",",");
+									document.write(changer);
+									document.write('</span>');
+									document.write('<span class="part-2-column-2-line-2-element-1l">');
+									changer = pricesl[n].toString();
+									changer = changer.replace(".",",");
+									document.write(changer);
+									document.write('</span>');
+									document.write('</div>');
+								}
+								a = document.getElementsByClassName('part-2-column-2-line-2-element-1');
+								l = document.getElementsByClassName('part-2-column-2-line-2-element-1KBP');
+								h = document.getElementsByClassName('part-2-column-2-line-2-element-1l');
+								for (var n = 0; n < sellers.length; n++)
+								{
+									a[n].style.display = "none";
+									h[n].style.display = "none";
+								}
+								
+								
+								mainPrice = a[0];
+								mainPrice.style.display = "inline-block";
+							</script>
+							
+								
+							
+							
+							<a class="part-2-column-2-line-2-element-2" onclick="basketPopUp(false)" onselectstart="return false">
+								BUY NOW
+							</a>
+						</div>
+						
+						<div class="part-2-column-2-line-3" onselectstart="return false">
+							<script>
+								var pickSeller;
+								var basket = document.getElementsByClassName("buying");
+								var darking = document.getElementsByClassName("darkPage");
+								var page = document.getElementsByClassName("page");
+								var button2 = document.getElementsByClassName("button2");
+								function basketPopUp(check)
+								{
+									
+									
+									
+									if (check == true)
+									{
+										if (c[pickSeller])
+										{
+											c[pickSeller].style.display = "none";
+										}
+										button2[0].style.display = "none";
+										
+									
+									}
+									else
+									{
+										button2[0].style.display = "block";
+										b[selectedSeller].style.display = "block";
+									}
+									
+									darking[0].classList.toggle("darkingPage");
+									
+									basket[0].classList.toggle("showPopUp");
+									
+								}
+								function pickseller(x)
+								{
+									
+									pickSeller = x;
+									
+								}
+								
+								function S4basketPopUp()
+								{
+									
+									b[selectedSeller].style.display = "none";
+									
+									c[pickSeller].style.display = "block";
+									
+									button2[0].style.display = "block";
+									darking[0].classList.toggle("darkingPage");
+									basket[0].classList.toggle("showPopUp");
+									
+									
+									
+									
+									
+									
+									
+								
+								
+								}
+								function togglePopUp()
+								{
+						
+									var flags = document.getElementsByClassName("pop-upContent");
+									flags[0].classList.toggle("showPopUp");
+				
+								}
+								function togglePopDown()
+								{
+						
+									var flags = document.getElementsByClassName("pop-upContent");
+									flags[0].classList.toggle("showPopUp");
+				
+								}
+								
+								
+								var listOpen = "All offers";
+								
+								document.write('<div class="part-2-column-2-line-3-element-1" onclick="list()">');
+								for ( var n = 0; n < sellers.length; n++)
+								{
+									document.write('<span class="part-2-column-2-line-3-element-1-text">');
+									document.write(sellers[n]);
+									document.write('</span>');
+								}
+								document.write('<span class="part-2-column-2-line-3-element-1-text">');
+								document.write(listOpen);
+								document.write('</span>');
+								var seller = document.getElementsByClassName("part-2-column-2-line-3-element-1-text");
+								
+								for ( var n = 0; n < sellers.length; n++)
+								{
+									seller[n].style.display = "none"
+								}
+								seller[sellers.length].style.display = "none";
+								sellerValue = seller[0];
+								setSeller(sellerValue);
+								function setSeller(x)
+								{
+									x.style.display = "inline-block";
+								}	
+								document.write('</div>');
+								document.write('<div class="part-2-column-2-line-3-element-1-options">');
+								for ( var n = 0; n < sellers.length; n++)
+								{
+									document.write('<div class="part-2-column-2-line-3-element-1-option option' + (n + 1) + '" onmouseover="optionUp(' + (n + 1) + ')" onmouseout="optionDown(' + ( n + 1) + ')" onclick="sellerValueChanger()">');
+									document.write('<div class="part-2-column-2-line-3-element-1-option-price">');
+									document.write('<span class="part-2-column-2-line-3-element-1-option-priceKBP">');
+									document.write('€');
+									changer = prices[n].toString();
+									changer = changer.replace(".",",");
+									document.write(changer);
+									document.write('</span>');
+									document.write('<span class="part-2-column-2-line-3-element-1-option-pricel">');
+									document.write('€');
+									changer = pricesl[n].toString();
+									changer = changer.replace(".",",");
+									document.write(changer);
+									document.write('</span>');
+									document.write('</div>');
+									document.write('<div class="part-2-column-2-line-3-element-1-option-seller">');
+									document.write('<span class="part-2-column-2-line-3-element-1-option-seller-text-1">from</span>');
+									document.write('<span class="part-2-column-2-line-3-element-1-option-seller-text-2">' + sellers[n] + '</span>');
+									document.write('</div>');
+									document.write('<div class="part-2-column-2-line-3-element-1-option-rating">');
+									document.write('<span class="part-2-column-2-line-3-element-1-option-seller-text-1">rating</span>');
+									document.write('<div class="part-2-column-2-line-3-element-1-option-rating-text-2">');
+									document.write('<div class="part-2-column-2-line-3-element-1-option-rating-text-2-star"></div>');
+									document.write('<span class="part-2-column-2-line-3-element-1-option-rating-text-2-text">' + ratting[n] + '</span>');
+									document.write('</div>');
+									document.write('</div>');
+									document.write('<a class="part-2-column-2-line-3-element-1-option-button" onmouseover="buttonUp()" onmouseout="buttonOut()" onclick="basketPopUp(false)">');
+									document.write('<span class="part-2-column-2-line-3-element-1-option-button-text">BUY</span>');
+									document.write('</a>');
+									document.write('</div>');
+								}
+								var m = document.getElementsByClassName('part-2-column-2-line-3-element-1-option-priceKBP');
+								var j = document.getElementsByClassName('part-2-column-2-line-3-element-1-option-pricel');
+								for ( var n = 0; n < sellers.length; n++)
+								{
+									j[n].style.display = "none";
+								}
+								document.write('</div>');
+							</script>
+							<div class="part-2-column-2-line-3-element-2">
+								<input type="checkbox" name="protect" class="part-2-column-2-line-3-element-2-checkbox" id="check" onchange="checkproteckt()" checked/>
+								<label for="check" class="part-2-column-2-line-3-element-2-label">include</label>
+								<span class="part-2-column-2-line-3-element-2-text">+€1.00</span>
+								<div class="part-2-column-2-line-3-element-2-protect"></div>
+							</div>
+						</div>
+						<div class="part-2-column-2-line-4">
+							<div class="part-2-column-2-line-4-element-1"></div>
+							<div class="pop-up" onmouseover="togglePopUp()" onmouseout="togglePopDown()">
+								<div class="part-2-column-2-line-4-element-2"></div>
+								<span class="part-2-column-2-line-4-element-3">MULTILANGUAGE</span>
+								<div class="pop-upContent">
+									<div class="flag1"></div>
+									<div class="flag2"></div>
+									<div class="flag3"></div>
+									<div class="flag4"></div>
+									<div class="flag5"></div>
+									<div class="flag6"></div>
+									<div class="flag7"></div>
+									<div class="flag8"></div>
+									<div class="flag9"></div>
+									<div class="flag10"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="part-3">
+					<div class="slider" onselectstart="return false">
+						<a class="button-left" onclick="plusItem(-1)"></a>
+						<a class="photosl" rel="gallery1" href="images/1.jpg"><img class="photos" src="images/1.jpg"/></a>
+						<a class="photosl" rel="gallery1" href="images/2.jpg"><img class="photos" src="images/2.jpg"/></a>
+						<a class="photosl" rel="gallery1" href="images/3.jpg"><img class="photos" src="images/3.jpg"/></a>
+						<a class="photosl" rel="gallery1" href="images/4.jpg"><img class="photos" src="images/4.jpg"/></a>
+						<a class="photosl" rel="gallery1" href="images/5.jpg"><img class="photos" src="images/5.jpg"/></a>
+						<a class="button-right" onclick="plusItem(+1)"></a>
+					</div>
+				</div>
+			</div>
+			<div class="section-2">
+				<div class="section-2-content">
+					<span class="section-2-text-1">
+						RELEASE<br/>DATE:
+					</span>
+					<div  class="section-2-date">
+						<span class="section-2-date-text-1-day">
+							14
+						</span>
+						<div class="section-2-date-text-1-day-line"></div>
+						<span class="section-2-date-text-1-month">
+							04
+						</span>
+						<div class="section-2-date-text-1-month-line"></div>
+						<span class="section-2-date-text-1-year">
+							15
+						</span>
+						<div class="section-2-date-text-1-year-line"></div>
+					</div>
+					<span class="section-2-text-2">INSTANT DELIVERY</span>
+					<div class="section-2-element-4"></div>
+				</div>
+			</div>
+			<div class="section-3">
+				<div class="section-3-element-1"></div>
+				<span class="section-3-element-2">MORE BUYING CHOICES</span>
+				<div class="section-3-element-3"></div>
+			</div>
+			
+			<div class="section-4">
+				<script>
+					
+					
+					
+					for (var n = 0; n < S4title.length; n++)
+					{
+						document.write('<div class="section-4-item" onselectstart="return false">');
+						document.write('<span class="section-4-item-text1">');
+						document.write(S4title[n]);
+						document.write('</span>');
+						document.write('<div class="section-4-item-part-2">');
+						document.write('<span class="section-4-item-part-2-text1">');
+						document.write(S4seller[n]);
+						document.write('</span>');
+						document.write('<div class="section-4-item-part-2-image-1" style="background: url(');
+						document.write("'");
+						document.write(S4image[n]);
+						document.write("'");
+						document.write(')"></div>');
+						document.write('<div class="section-4-item-part-2-images-2">');
+						document.write('<div class="section-4-item-part-2-images-2-image-1"></div>');
+						document.write('<div class="section-4-item-part-2-images-2-image-2"></div>');
+						document.write('<div class="section-4-item-part-2-images-2-image-3"></div>');
+						document.write('<div class="section-4-item-part-2-images-2-image-4"></div>');
+						document.write('</div>');
+						document.write('</div>');
+						document.write('<div class="section-4-item-part-3">');
+						document.write('<div class="section-4-item-part-3-price">');
+						document.write('<span class="section-4-item-part-3-priceKBP">');
+						document.write('€');
+						changer = S4price[n].toString();
+						changer = changer.replace(".",",");
+						document.write(changer);
+						document.write('</span>');
+						document.write('<span class="section-4-item-part-3-pricel">');
+						document.write('€');
+						changer = S4pricel[n].toString();
+						changer = changer.replace(".",",");
+						document.write(changer);
+						document.write('</span>');
+						document.write('</div>');
+						document.write('<div class="section-4-item-part-3-line-2">');
+						document.write('<span class="section-4-item-part-3-line-2-element-1">');
+						document.write(S4discount[n]);
+						document.write('</span>');
+						document.write('<div class="section-4-item-part-3-line-2-element-2"></div>');
+						document.write('<span class="section-4-item-part-3-line-2-element-3">');
+						document.write(S4crossLine[n]);
+						document.write('</span>');
+						document.write('</div>');
+						document.write('<a class="section-4-item-part-3-line-3" onmouseover="pickseller(' + n + ')" onclick="S4basketPopUp()" onselectstart="return false">');
+						document.write('BUY NOW');
+						document.write('</a>');
+						document.write('<div class="section-4-item-part-3-line-4">');
+						document.write('<input type="checkbox" name="protect" class="section-4-item-part-3-line-4-checkbox section-4-item-part-3-line-4-checkbox');
+						document.write(n + 1);
+						document.write('" id="check');
+						document.write(n + 1);
+						document.write('" onchange="checksection4itempart3line4(');
+						document.write(n + 1);
+						document.write(')" checked/>');
+						document.write('<label for="check');
+						document.write(n + 1);
+						document.write('" class="section-4-item-part-3-line-4-label">include</label>');
+						document.write('<span class="section-4-item-part-3-line-4-text">');
+						document.write(S4protectPrice[n]);
+						document.write('</span>');
+						document.write('<div class="section-4-item-part-3-line-4-protect section-4-item-part-3-line-4-protect');
+						document.write(n + 1);
+						document.write('"></div>');
+						document.write('</div>');
+						document.write('</div>');
+						document.write('<span class="section-4-item-text2">');
+						document.write(S4description[n]);
+						document.write('</span>');
+						document.write('</div>');
+					}
+					var p = document.getElementsByClassName('section-4-item-part-3-priceKBP');
+					var k = document.getElementsByClassName('section-4-item-part-3-pricel');
+					for (var n = 0; n < S4title.length; n++)
+					{
+						k[n].style.display = "none";
+					}
+				</script>
+			</div>
+			
+			<div class="section-5">
+				<div class="section-5-head"></div>
+				<div class="section-5-line-1">
+					<div class="section-5-line-1-element-1"></div>
+					<span class="section-5-line-1-element-2">
+						Buy Batman™ Arkham Knight key for PC and put the mask on again to protect Gotham. Arkham Knight concludes the epic trilogy of Batman video games. The game introduces uniquely designed, exciting Batmobile. Full of gadgets and weapons vehicle owned by the Dark Knight himself. Experience brand new adventure in Gotham City. Place ruled by crime and violence. Order Batman™ Arkham Knight Key for PC today! 
+					</span>
+				</div>
+			</div>
+			<div class="section-6">
+				<div class="section-6-element-1">
+					<div class="section-6-element-1-image"></div>
+					<div class="section-6-element-1-text">
+						<span class="section-6-element-1-text-title">
+							BE THE BLAH BLAH BLAH
+						</span>
+						<span class="section-6-element-1-text-contents">
+							Grand Theft Auto V for PC features a range of major visual and technical upgrades to make Los Santos and Blaine County more immersive than ever. In addition to vastly increased draw distances, Grand Theft Auto V for PC runs at 60FPS in 1080p, with the ability to display visuals in 4K resolution.
+						</span>
+					</div>
+				</div>
+				<div class="section-6-element-2">
+					<div class="section-6-element-2-image"></div>
+					<div class="section-6-element-2-text">
+						<span class="section-6-element-2-text-title">
+							GET BEHIND THE WHEEL OF THE BATMOBILE
+						</span>
+						<span class="section-6-element-2-text-contents">
+							The PC versions of Grand Theft Auto V and Grand Theft Auto Online will also feature First Person Mode, giving players the chance to explore the incredibly detailed world of Los Santos and Blaine County in an entirely new way.
+						</span>
+					</div>
+				</div>
+				<div class="section-6-element-3">
+					<div class="section-6-element-3-image"></div>
+					<div class="section-6-element-3-text">
+						<span class="section-6-element-3-text-title">
+							GREAT CONCLUSION TO
+						</span>
+						<span class="section-6-element-3-text-contents">
+							Grand Theft Auto V also comes with Grand Theft Auto Online, the dynamic and ever-evolving Grand Theft Auto universe. Enhancements to Grand Theft Auto Online for PC will include an increased player count, with online play for up to 30 players. 
+						</span>
+					</div>
+				</div>
+				<div class="section-6-element-4">
+					<div class="section-6-element-4-image"></div>
+					<div class="section-6-element-4-text">
+						<span class="section-6-element-4-text-title">
+							VISIT DARK CITY OF GOTHAM
+						</span>
+						<span class="section-6-element-4-text-contents">
+							Grand Theft Auto V for PC also includes the new Rockstar Editor, which gives players a full suite of editing tools to create and publish gameplay clips direct to both Social Club and YouTube. 
+						</span>
+					</div>
+			
+				</div>
+		</div>
+		
+		<div class="section-7">
+			<div class="section-7-element-1"></div>
+			<span class="section-7-element-2">PURCHASE CALL OF DUTY: BLACK OPS 3 ON KINGUIN NOW</span>
+			<div class="section-7-element-3"></div>
+		</div>
+		<div class="section-8">
+			<div class="video-frame">
+				<div class="youtube-image"></div>
+			</div>
+			<div id="section8part1"></div>
+			
+			<div class="wideo-play" onclick="youtube()">
+				<div class="wideo-play-hover" onclick="youtube()"></div>
+			</div>
+			
+			<div class="section-8-part-2">
+				<div class="section-8-part-2-element-1"></div>
+				<div class="section-8-part-2-element-2"></div>
+			</div>
+		</div>
+		
+		<div class="section-9">
+			<span class="section-9-element-1">
+				BECOME BLACK OP
+			</span>
+			<a class="section-9-element-2" href="#">
+				COMPARE PRICES
+			</a>
+		</div>
+			
+						
+						
+					
+		<script>
+			var tag = document.createElement('script');
+			tag.src = "https://www.youtube.com/iframe_api";
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+			var player;
+			
+			$(window).load(function(){ var q = document.getElementsByClassName("video"); q[0].style.visibility = "visible";    });
+			
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('section8part1', {
+          height: '516',
+          width: '914',
+          videoId: 'pj_q9JhyxUg',
+        });
+      }
+			function youtube()
+			{
+				var x = document.getElementsByClassName("youtube-image");
+				var y = document.getElementsByClassName("wideo-play");
+				var z = document.getElementById("section8part1");
+				var left = document.getElementsByClassName("section-8-part-2-element-1");
+				var right = document.getElementsByClassName("section-8-part-2-element-2");
+				
+				x[0].style.visibility = "hidden";
+				y[0].style.visibility = "hidden";
+				left[0].style.animation = "rightSoldier 1s linear";
+				left[0].style.webkitAnimation = "rightSoldier 1s linear";
+				left[0].style.mozAnimation = "rightSoldier 1s linear";
+				right[0].style.animation = "leftSoldier 1s linear";
+				right[0].style.webkitAnimation = "leftSoldier 1s linear";
+				right[0].style.mozAnimation = "leftSoldier 1s linear";
+				setTimeout(function() {left[0].style.animationPlayState = "paused"; left[0].style.webkitAnimationPlayState = "paused"; left[0].style.mozAnimationPlayState = "paused"}, 950);
+				setTimeout(function() {right[0].style.animationPlayState = "paused"; right[0].style.webkitAnimationPlayState = "paused"; right[0].style.mozAnimationPlayState = "paused"}, 950);
+				setTimeout(function() {z.style.zIndex = "3"}, 950);
+				
+				
+				player.playVideo();
+			}
+			function showItems(n)
+					{
+						var name;
+						var i;
+						var x = document.getElementsByClassName("photos");
+						var left = document.getElementsByClassName("button-left");
+						var right = document.getElementsByClassName("button-right");
+						left[0].style.display = "inline-block";
+						left[0].style.marginTop = "54px";
+						for(i = 0; i < x.length; i++)
+						{
+							x[i].style.display = "none";
+						}
+						if (n == 1)
+						{
+							x[3].style.display = "inline-block";
+							x[3].style.width = "165px";
+							x[3].style.height = "93px";
+							x[3].style.top = "26px";
+							x[3].style.left = "56px";
+							x[3].style.zIndex = "0";
+							x[4].style.display = "inline-block";
+							x[4].style.width = "204px";
+							x[4].style.height = "115px";
+							x[4].style.top = "15px";
+							x[4].style.left = "190px";
+							x[4].style.zIndex = "1";
+							x[n-1].style.display = "inline-block";
+							x[n-1].style.width = "251px";
+							x[n-1].style.height = "142px";
+							x[n-1].style.top = "0px";
+							x[n-1].style.left = "369px";
+							x[n-1].style.zIndex = "2";
+							x[n].style.display = "inline-block";
+							x[n].style.width = "204px";
+							x[n].style.height = "115px";
+							x[n].style.top = "15px";
+							x[n].style.left = "597px";
+							x[n].style.zIndex = "1";
+							x[n+1].style.display = "inline-block";
+							x[n+1].style.width = "165px";
+							x[n+1].style.height = "93px";
+							x[n+1].style.top = "26px";
+							x[n+1].style.left = "773px";
+							x[n+1].style.zIndex = "0";
+						}
+						if (n == 2)
+						{
+							x[4].style.display = "inline-block";
+							x[4].style.width = "165px";
+							x[4].style.height = "93px";
+							x[4].style.top = "26px";
+							x[4].style.left = "56px";
+							x[4].style.zIndex = "0";
+							x[n-2].style.display = "inline-block";
+							x[n-2].style.width = "204px";
+							x[n-2].style.height = "115px";
+							x[n-2].style.top = "15px";
+							x[n-2].style.left = "190px";
+							x[n-2].style.zIndex = "1";
+							x[n-1].style.display = "inline-block";
+							x[n-1].style.width = "251px";
+							x[n-1].style.height = "142px";
+							x[n-1].style.top = "0px";
+							x[n-1].style.left = "369px";
+							x[n-1].style.zIndex = "2";
+							x[n].style.display = "inline-block";
+							x[n].style.width = "204px";
+							x[n].style.height = "115px";
+							x[n].style.top = "15px";
+							x[n].style.left = "597px";
+							x[n].style.zIndex = "1";
+							x[n+1].style.display = "inline-block";
+							x[n+1].style.width = "165px";
+							x[n+1].style.height = "93px";
+							x[n+1].style.top = "26px";
+							x[n+1].style.left = "773px";
+							x[n+1].style.zIndex = "0";
+						}
+						if (n == 3)
+						{
+							x[n-3].style.display = "inline-block";
+							x[n-3].style.width = "165px";
+							x[n-3].style.height = "93px";
+							x[n-3].style.top = "26px";
+							x[n-3].style.left = "56px";
+							x[n-3].style.zIndex = "0";
+							x[n-2].style.display = "inline-block";
+							x[n-2].style.width = "204px";
+							x[n-2].style.height = "115px";
+							x[n-2].style.top = "15px";
+							x[n-2].style.left = "190px";
+							x[n-2].style.zIndex = "1";
+							x[n-1].style.display = "inline-block";
+							x[n-1].style.width = "251px";
+							x[n-1].style.height = "142px";
+							x[n-1].style.top = "0px";
+							x[n-1].style.left = "369px";
+							x[n-1].style.zIndex = "2";
+							x[n].style.display = "inline-block";
+							x[n].style.width = "204px";
+							x[n].style.height = "115px";
+							x[n].style.top = "15px";
+							x[n].style.left = "597px";
+							x[n].style.zIndex = "1";
+							x[n+1].style.display = "inline-block";
+							x[n+1].style.width = "165px";
+							x[n+1].style.height = "93px";
+							x[n+1].style.top = "26px";
+							x[n+1].style.left = "773px";
+							x[n+1].style.zIndex = "0";
+						}
+						if (n == 4)
+						{
+							x[n-3].style.display = "inline-block";
+							x[n-3].style.width = "165px";
+							x[n-3].style.height = "93px";
+							x[n-3].style.top = "26px";
+							x[n-3].style.left = "56px";
+							x[n-3].style.zIndex = "0";
+							x[n-2].style.display = "inline-block";
+							x[n-2].style.width = "204px";
+							x[n-2].style.height = "115px";
+							x[n-2].style.top = "15px";
+							x[n-2].style.left = "190px";
+							x[n-2].style.zIndex = "1";
+							x[n-1].style.display = "inline-block";
+							x[n-1].style.width = "251px";
+							x[n-1].style.height = "142px";
+							x[n-1].style.top = "0px";
+							x[n-1].style.left = "369px";
+							x[n-1].style.zIndex = "2";
+							x[n].style.display = "inline-block";
+							x[n].style.width = "204px";
+							x[n].style.height = "115px";
+							x[n].style.top = "15px";
+							x[n].style.left = "597px";
+							x[n].style.zIndex = "1";
+							x[0].style.display = "inline-block";
+							x[0].style.width = "165px";
+							x[0].style.height = "93px";
+							x[0].style.top = "26px";
+							x[0].style.left = "773px";
+							x[0].style.zIndex = "0";
+						}
+						if ( n == 5)
+						{
+							x[n-3].style.display = "inline-block";
+							x[n-3].style.width = "165px";
+							x[n-3].style.height = "93px";
+							x[n-3].style.top = "26px";
+							x[n-3].style.left = "56px";
+							x[n-3].style.zIndex = "0";
+							x[n-2].style.display = "inline-block";
+							x[n-2].style.width = "204px";
+							x[n-2].style.height = "115px";
+							x[n-2].style.top = "15px";
+							x[n-2].style.left = "190px";
+							x[n-2].style.zIndex = "1";
+							x[n-1].style.display = "inline-block";
+							x[n-1].style.width = "251px";
+							x[n-1].style.height = "142px";
+							x[n-1].style.top = "0px";
+							x[n-1].style.left = "369px";
+							x[n-1].style.zIndex = "2";
+							x[0].style.display = "inline-block";
+							x[0].style.width = "204px";
+							x[0].style.height = "115px";
+							x[0].style.top = "15px";
+							x[0].style.left = "597px";
+							x[0].style.zIndex = "1";
+							x[1].style.display = "inline-block";
+							x[1].style.width = "165px";
+							x[1].style.height = "93px";
+							x[1].style.top = "26px";
+							x[1].style.left = "773px";
+							x[1].style.zIndex = "0";
+						}
+						right[0].style.display = "inline-block";
+						right[0].style.marginTop = "54px";
+					}
+					var slideIndex = 3;
+					showItems(slideIndex);
+			function plusItem(n)
+			{
+				slideIndex += n;
+				if (slideIndex == 0)
+				{
+					slideIndex = 5;
+				}
+				if (slideIndex == 6)
+				{
+					slideIndex = 1;
+				}
+				showItems(slideIndex);
+			}
+			$(document).ready(function() 
+			{
+				
+				$(".photosl").fancybox({
+				openEffect	: 'none',
+				closeEffect	: 'none'
+				});
+				
+			});
+			function checksection4itempart3line4(x)
+			{
+				
+				var y = document.getElementsByClassName("section-4-item-part-3-line-4-protect" + x);
+				var z = document.getElementsByClassName("section-4-item-part-3-line-4-checkbox" + x);
+				if(z.protect.checked == true)
+				{
+					y[0].style.filter = "grayscale(0%)";
+					p[x-1].style.display = "inline-block";
+					k[x-1].style.display = "none";
+					f[x-1].style.display = "inline-block";
+					g[x-1].style.display = "none";
+				}
+				else
+				{
+					y[0].style.filter = "grayscale(100%)";
+					p[x-1].style.display = "none";
+					k[x-1].style.display = "inline-block";
+					f[x-1].style.display = "none";
+					g[x-1].style.display = "inline-block";
+				}
+			}
+			
+			var o;
+			var show = false;
+			function opacityOn()
+			{
+				var x = document.getElementsByClassName("section-1-part-2-column-1-twitter");
+				x[0].style.opacity = "1";
+			}
+			function opacityOff()
+			{
+				var x = document.getElementsByClassName("section-1-part-2-column-1-twitter");
+				x[0].style.opacity = "0.3";
+			}
+			function optionUp(a)
+			{
+				o = a;
+				var x = document.getElementsByClassName("option" + a);
+				var price = x[0].getElementsByClassName("part-2-column-2-line-3-element-1-option-price");
+				var seller1 = x[0].getElementsByClassName("part-2-column-2-line-3-element-1-option-seller-text-1");
+				var seller2 = x[0].getElementsByClassName("part-2-column-2-line-3-element-1-option-seller-text-2");
+				var rating = x[0].getElementsByClassName("part-2-column-2-line-3-element-1-option-rating-text-2-text");
+				var star = x[0].getElementsByClassName("part-2-column-2-line-3-element-1-option-rating-text-2-star");
+				var button = x[0].getElementsByClassName("part-2-column-2-line-3-element-1-option-button");
+				x[0].style.backgroundColor = "rgba(52, 51, 51, 1)";
+				price[0].style.color = "rgba(254, 247, 204, 1)";
+				seller1[0].style.color = "rgba(216, 216, 216, 1)";
+				seller2[0].style.color = "rgba(216, 216, 216, 1)";
+				seller1[1].style.color = "rgba(216, 216, 216, 1)";
+				rating[0].style.color = "rgba(216, 216, 216, 1)";
+				star[0].style.background = "url('images/star_hover.png')";
+				button[0].style.background = "url('images/option_buy_button_active.png')";
+			}
+			function optionDown(a)
+			{
+				var x = document.getElementsByClassName("option" + a);
+				var price = x[0].getElementsByClassName("part-2-column-2-line-3-element-1-option-price");
+				var seller1 = x[0].getElementsByClassName("part-2-column-2-line-3-element-1-option-seller-text-1");
+				var seller2 = x[0].getElementsByClassName("part-2-column-2-line-3-element-1-option-seller-text-2");
+				var rating = x[0].getElementsByClassName("part-2-column-2-line-3-element-1-option-rating-text-2-text");
+				var star = x[0].getElementsByClassName("part-2-column-2-line-3-element-1-option-rating-text-2-star");
+				var button = x[0].getElementsByClassName("part-2-column-2-line-3-element-1-option-button");
+				x[0].style.backgroundColor = "#111011";
+				price[0].style.color = "rgba(255, 255, 255, 0.22)";
+				seller1[0].style.color = "rgba(255, 255, 255, 0.22)";
+				seller2[0].style.color = "rgba(255, 255, 255, 0.22)";
+				seller1[1].style.color = "rgba(255, 255, 255, 0.22)";
+				rating[0].style.color = "rgba(255, 255, 255, 0.22)";
+				star[0].style.background = "url('images/star.png')";
+				button[0].style.background = "url('images/option_buy_button.png')";
+			}
+			function buttonUp()
+			{
+				var x = document.getElementsByClassName("option" + o);
+				var button = x[0].getElementsByClassName("part-2-column-2-line-3-element-1-option-button");
+				button[0].style.filter = "saturate(150%)";
+				
+			}
+			function buttonOut()
+			{
+				var x = document.getElementsByClassName("option" + o);
+				var button = x[0].getElementsByClassName("part-2-column-2-line-3-element-1-option-button");
+				button[0].style.filter = "saturate(100%)";
+			}
+			function list()
+			{
+				if (show == false)
+				{
+					show = true;
+					sellerValue.style.display = "none";
+					setSeller(seller[sellers.length]);
+					showList();
+				}
+				else
+				{
+					show = false;
+					seller[sellers.length].style.display = "none";
+					setSeller(sellerValue);
+					showList();
+				}
+				
+			}
+			function showList()
+			{
+				var x = document.getElementsByClassName("part-2-column-2-line-3-element-1-options");
+				if(show == false)
+				{
+					x[0].style.display = "none";
+				}
+				if(show == true)
+				{
+					var widthpart2column2line3element1optionprice = 70;
+					var widthnewpart2column2line3element1optionprice; 
+					var widthpart2column2line3element1optionsellertext2 = 98;
+					var widthnewpart2column2line3element1optionsellertext2;
+					var widthpart2column2line3element1optionratingtext2text = 69;
+					var widthnewpart2column2line3element1optionratingtext2text; 
+					x[0].style.display = "block";
+					for ( var n = 0; n < sellers.length; n++)
+					{
+						widthnewpart2column2line3element1optionprice = (parseInt($("div.option" + (n + 1) + " div.part-2-column-2-line-3-element-1-option-price").outerWidth()));
+						alert(widthnewpart2column2line3element1optionprice);
+						widthnewpart2column2line3element1optionsellertext2 = (parseInt($("div.option" + (n + 1) + " span.part-2-column-2-line-3-element-1-option-seller-text-2").outerWidth()));
+						widthnewpart2column2line3element1optionratingtext2text = (parseInt($("div.option" + (n + 1) + " span.part-2-column-2-line-3-element-1-option-rating-text-2-text").outerWidth()));
+						if (widthnewpart2column2line3element1optionprice > widthpart2column2line3element1optionprice)
+						{
+							widthpart2column2line3element1optionprice = widthnewpart2column2line3element1optionprice;
+						}
+						if (widthnewpart2column2line3element1optionsellertext2 > widthpart2column2line3element1optionsellertext2)
+						{
+							widthpart2column2line3element1optionsellertext2 = widthnewpart2column2line3element1optionsellertext2;
+						}
+						if (widthnewpart2column2line3element1optionratingtext2text > widthpart2column2line3element1optionratingtext2text)
+						{
+							widthpart2column2line3element1optionratingtext2text = widthnewpart2column2line3element1optionratingtext2text;
+						}
+					}
+					if (widthpart2column2line3element1optionprice > 70)
+					{
+						var part2column2line3element1optionprice = document.getElementsByClassName("part-2-column-2-line-3-element-1-option-price");
+						for ( var n = 0; n < sellers.length; n++)
+						{
+							part2column2line3element1optionprice[n].style.minWidth = widthpart2column2line3element1optionprice + "px";
+						}
+					}
+					if (widthpart2column2line3element1optionsellertext2 > 98)
+					{
+						var part2column2line3element1optionsellertext2 = document.getElementsByClassName("part-2-column-2-line-3-element-1-option-seller-text-2");
+						for ( var n = 0; n < sellers.length; n++)
+						{
+							part2column2line3element1optionsellertext2[n].style.minWidth = widthpart2column2line3element1optionsellertext2 + "px";
+						}
+					}
+					if (widthpart2column2line3element1optionratingtext2text > 69)
+					{
+						var part2column2line3element1optionratingtext2text = document.getElementsByClassName("part-2-column-2-line-3-element-1-option-rating-text-2-text");
+						for ( var n = 0; n < sellers.length; n++)
+						{
+							part2column2line3element1optionratingtext2text[n].style.minWidth = widthpart2column2line3element1optionratingtext2text + "px";
+						}
+					}
+				}
+			}
+			function sellerValueChanger()
+			{
+				//sellerValue.style.display = "none";
+				mainPrice.style.display = "none";
+				mainPrice = a[o - 1];
+				mainPrice.style.display = "inline-block";
+				b[selectedSeller].style.display = "none";
+				selectedSeller = o - 1;
+				b[selectedSeller].style.display = "block";
+				sellerValue = seller[o-1];
+				setSeller(sellerValue);
+				list();
+			}
+			function checkproteckt()
+			{
+				var y = document.getElementsByClassName("part-2-column-2-line-3-element-2-protect");
+				var z = document.getElementsByClassName("part-2-column-2-line-3-element-2-checkbox");
+				if(z.protect.checked == true)
+				{
+					
+					y[0].style.filter = "grayscale(0%)";
+					for (var n = 0; n < sellers.length; n++)
+					{
+						e[n].style.display = "none";
+						d[n].style.display = "inline-block";
+						l[n].style.display = "inline-block";
+						h[n].style.display = "none";
+						m[n].style.display = "inline-block";
+						j[n].style.display = "none";
+					}
+				}
+				else
+				{
+					y[0].style.filter = "grayscale(100%)";
+					for (var n = 0; n < sellers.length; n++)
+					{
+						d[n].style.display = "none";
+						e[n].style.display = "inline-block";
+						l[n].style.display = "none";
+						h[n].style.display = "inline-block";
+						m[n].style.display = "none";
+						j[n].style.display = "inline-block";
+					}
+					
+				
+					
+						
+					
+
+				}
+			}
+		</script>
+		
+		</div>
+		
+	</body>
+		
+	</html
+>
